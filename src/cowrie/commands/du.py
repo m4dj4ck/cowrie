@@ -85,7 +85,7 @@ or available locally via: info '(coreutils) du invocation'\n"""
         args = self.args
         if args:
             if '-sh' == args[0]:
-                self.write('28K     .\n')
+                self.write('2800K     .\n')
             elif '--help' == args[0]:
                 self.write(self.message_help())
             else:
