@@ -3,8 +3,9 @@ MAINTAINER Florian Pelgrim <florian.pelgrim@craneworks.de>
 RUN apk add --no-cache libffi && \
   addgroup -S cowrie && \
   adduser -S -s /bin/bash -G cowrie -D -H -h /cowrie cowrie && \
-  mkdir -p /cowrie/dl && \
-  mkdir -p /cowrie/log/tty && \
+  mkdir -p /cowrie/var/lib/cowrie/downloads && \
+  mkdir -p /cowrie/var/lib/cowrie/tty && \
+  mkdir -p /cowrie/var/log/cowrie/ && \
   chown -R cowrie:cowrie /cowrie && \
   chmod -R 775 /cowrie
 COPY requirements.txt .
